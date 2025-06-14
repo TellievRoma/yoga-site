@@ -43,7 +43,7 @@
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       cursor: pointer;
     }
     a.course-card:hover {
@@ -58,11 +58,26 @@
       color: #2c6d5d;
     }
     a.course-card p {
-      margin: 0;
+      margin: 0 0 20px 0;
       font-size: 1rem;
       line-height: 1.5;
       color: #555;
       flex-grow: 1;
+    }
+    a.course-card .btn {
+      align-self: flex-start;
+      padding: 8px 18px;
+      background-color: #3a8e7f;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgb(58 142 127 / 0.3);
+      transition: background-color 0.3s ease;
+    }
+    a.course-card .btn:hover {
+      background-color: #2b6b58;
+      box-shadow: 0 6px 12px rgb(43 107 88 / 0.5);
     }
     footer {
       text-align: center;
@@ -82,28 +97,32 @@
     <a href="hatha.html" class="course-card">
       <h2>Хатха йога курс для преподавателей</h2>
       <p>Обучение для тех, кто хочет получить сильную базу в асанах и анатомии йоги, стать сертифицированным преподавателем по Хатха йоге.</p>
+      <span class="btn">Подробнее</span>
     </a>
     <a href="aero.html" class="course-card">
       <h2>Аэройога курс для преподавателей</h2>
       <p>Обучение для тех, кто хочет стать грамотным, сертифицированным преподавателем по Аэройоге.</p>
+      <span class="btn">Подробнее</span>
     </a>
-   <a href="anatomy.html" class="course-card">
-  <h2>Анатомия. От клетки до организма</h2>
-  <p>6 недель обучения, 30 видеоуроков, методичка 200 страниц и поэтапное изучение разделов.</p>
-</a>
+    <a href="anatomy.html" class="course-card">
+      <h2>Анатомия. От клетки до организма</h2>
+      <p>6 недель обучения, 30 видеоуроков, методичка 200 страниц и поэтапное изучение разделов.</p>
+      <span class="btn">Подробнее</span>
+    </a>
     <a href="pranayama.html" class="course-card">
-  <h2>Пранаямы — Углублённая практика</h2>
-  <p>Обучение по техникам пранаям, анатомии дыхательной системы и правильному выполнению бандх.</p>
-</a>
-    <div class="course-card">
-  <h3>Хатха йога. Базовый уровень</h3>
-  <p>...</p>
-  <a href="hatha-yoga.html" class="btn">Подробнее</a>
-</div>
-
+      <h2>Пранаямы — Углублённая практика</h2>
+      <p>Обучение по техникам пранаям, анатомии дыхательной системы и правильному выполнению бандх.</p>
+      <span class="btn">Подробнее</span>
+    </a>
+    <a href="women-health.html" class="course-card">
+      <h2>Женское здоровье — Авторская методика</h2>
+      <p>Укрепление мышц, дыхательные практики, медитации и техники расслабления с обратной связью.</p>
+      <span class="btn">Подробнее</span>
+    </a>
   </main>
   <footer>
     &copy; 2025 Школа Йоги. Все права защищены.
   </footer>
 </body>
 </html>
+
