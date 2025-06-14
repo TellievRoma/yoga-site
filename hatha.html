@@ -1,108 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Хатха йога — Базовый уровень</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Хатха йога курс для преподавателей | Школа Йоги</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
+      background: #f0f4f8;
       color: #333;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
     }
     header {
-      background: url('https://disk.yandex.com/i/gnnB1MtEH663WQ') no-repeat center center;
-      background-size: cover;
+      background: #3a8e7f;
       color: white;
-      padding: 80px 20px;
+      padding: 40px 20px;
       text-align: center;
+      border-radius: 0 0 14px 14px;
+      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+      margin-bottom: 40px;
     }
     header h1 {
-      font-size: 2.5em;
       margin: 0;
-      background-color: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 10px;
+      font-weight: 700;
+      font-size: 2.4rem;
+      letter-spacing: 1.1px;
     }
-    .section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+    main {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-top: 20px;
+      padding: 30px 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
     }
-    h2 {
+    main h2 {
+      color: #2c6d5d;
       margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
-    ul {
+    main ul {
+      list-style-type: disc;
       padding-left: 20px;
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
-    .price {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #1a7f4f;
-      margin-top: 10px;
+    main p.cost {
+      margin-top: 30px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #3a8e7f;
     }
-    .button {
+    a.back-link {
       display: inline-block;
-      margin-top: 20px;
-      background: #1a7f4f;
-      color: white;
-      padding: 12px 24px;
+      margin-top: 30px;
       text-decoration: none;
-      border-radius: 8px;
+      color: #3a8e7f;
+      font-weight: 600;
+      border: 2px solid #3a8e7f;
+      padding: 8px 14px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      margin-top: 40px;
+    a.back-link:hover {
+      background-color: #3a8e7f;
+      color: white;
+    }
+    main img {
+      max-width: 100%;
+      margin: 25px 0;
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Хатха йога — Базовый уровень</h1>
+    <h1>Хатха йога курс для преподавателей</h1>
   </header>
-
-  <section class="section">
+  <main>
     <h2>Описание курса</h2>
     <p>Обучение для тех, кто хочет получить сильную базу в асанах и анатомии йоги, стать сертифицированным преподавателем по Хатха йоге.</p>
-
-    <h3>Курс включает:</h3>
     <ul>
-      <li>Базовую анатомию человека</li>
-      <li>Историю и философию йоги</li>
-      <li>Базовые асаны Хатха йоги (40 асан: отстройка, правка, эффекты и противопоказания)</li>
+      <li>Базовая анатомия человека</li>
+      <li>История и философия йоги</li>
+      <li>Базовые асаны Хатха йоги, 40 асан (отстройка, правка, эффекты и противопоказания)</li>
       <li>Бандхи</li>
       <li>Пранаямы</li>
-      <li>Аюрведу (Гуны, Доши)</li>
+      <li>Аюрведа (Гуны, Доши)</li>
     </ul>
-
-    <h3>Детали обучения</h3>
-    <ul>
-      <li>Длительность: 2 месяца</li>
-      <li>29 уроков и домашних заданий</li>
-      <li>6 онлайн консультаций</li>
-      <li>Финальный экзамен</li>
-    </ul>
-
-    <p class="price">Стоимость: 40 000 рублей</p>
-
-    <h3>Как получить доступ</h3>
-    <p>Оплатите курс переводом на банковский счёт (уточняется при обращении) и напишите мне в Telegram:</p>
-    <p><strong>Telegram:</strong> @ваш_ник</p>
-
-    <a href="https://t.me/ваш_ник" class="button">Написать в Telegram</a>
-  </section>
-
-  <footer>
-    &copy; 2025 Школа Йоги. Все права защищены.
-  </footer>
+    <p>Длительность обучения: 2 месяца, 29 уроков и домашних заданий, 6 онлайн консультаций и экзамен.</p>
+    <p class="cost">Стоимость обучения: 40 000 рублей</p>
+    <img src="https://disk.yandex.com/i/gnnB1MtEH663WQ" alt="Хатха йога курс" />
+    <a href="index.html" class="back-link">← Вернуться на главную</a>
+  </main>
 </body>
 </html>
