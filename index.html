@@ -3,93 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Пранаямы — Углублённая практика | Школа Йоги</title>
+  <title>Школа Йоги — Курсы</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
-      background: #f4f7fb;
-      color: #333c4e;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 20px;
+      background: #f0f4f8;
+      color: #333;
     }
     header {
-      background: #2c3e50;
+      background: #3a8e7f;
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
-      border-radius: 0 0 14px 14px;
       box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
-      margin-bottom: 40px;
     }
     header h1 {
       margin: 0;
       font-weight: 700;
-      font-size: 2.4rem;
-      letter-spacing: 1.1px;
+      font-size: 2.8rem;
+      letter-spacing: 1.2px;
     }
     main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    a.course-card {
       background: white;
-      padding: 30px 25px;
+      padding: 24px 20px;
       border-radius: 14px;
       box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
-    }
-    main h2 {
-      color: #355c7d;
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-    main ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      color: #555;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    main p.cost {
-      margin-top: 30px;
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #1f4e79;
-    }
-    a.back-link {
-      display: inline-block;
-      margin-top: 30px;
       text-decoration: none;
-      color: #1f4e79;
-      font-weight: 600;
-      border: 2px solid #1f4e79;
-      padding: 8px 14px;
-      border-radius: 10px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      color: inherit;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
     }
-    a.back-link:hover {
-      background-color: #1f4e79;
+    a.course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgb(0 0 0 / 0.15);
+    }
+    a.course-card h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #2c6d5d;
+    }
+    a.course-card p {
+      margin: 0 0 20px 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+      flex-grow: 1;
+    }
+    a.course-card .btn {
+      align-self: flex-start;
+      padding: 8px 18px;
+      background-color: #3a8e7f;
       color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgb(58 142 127 / 0.3);
+      transition: background-color 0.3s ease;
+    }
+    a.course-card .btn:hover {
+      background-color: #2b6b58;
+      box-shadow: 0 6px 12px rgb(43 107 88 / 0.5);
+    }
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Пранаямы — Углублённая практика</h1>
+    <h1>Школа Йоги — Курсы</h1>
   </header>
   <main>
-    <h2>Описание курса</h2>
-    <p>Обучение для тех, кто хочет обладать грамотными знаниями по:</p>
-    <ul>
-      <li>Анатомии и физиологии дыхательной системы</li>
-      <li>Техникам выполнения пранаям</li>
-      <li>Эффекту, которые оказывают пранаямы на организм человека</li>
-      <li>Противопоказаниям к каждой пранаяме</li>
-      <li>Правильному выполнению бандх</li>
-    </ul>
-    <p class="cost">Стоимость: 15 000 рублей</p>
-    <a href="index.html" class="back-link">← Вернуться на главную</a>
+    <a href="hatha.html" class="course-card">
+      <h2>Хатха йога курс для преподавателей</h2>
+      <p>Обучение для тех, кто хочет получить сильную базу в асанах и анатомии йоги, стать сертифицированным преподавателем по Хатха йоге.</p>
+      <span class="btn">Подробнее</span>
+    </a>
+    <a href="aero.html" class="course-card">
+      <h2>Аэройога курс для преподавателей</h2>
+      <p>Обучение для тех, кто хочет стать грамотным, сертифицированным преподавателем по Аэройоге.</p>
+      <span class="btn">Подробнее</span>
+    </a>
+    <a href="anatomy.html" class="course-card">
+      <h2>Анатомия. От клетки до организма</h2>
+      <p>6 недель обучения, 30 видеоуроков, методичка 200 страниц и поэтапное изучение разделов.</p>
+      <span class="btn">Подробнее</span>
+    </a>
+    <a href="pranayama.html" class="course-card">
+      <h2>Пранаямы — Углублённая практика</h2>
+      <p>Обучение по техникам пранаям, анатомии дыхательной системы и правильному выполнению бандх.</p>
+      <span class="btn">Подробнее</span>
+    </a>
+    <a href="women-health.html" class="course-card">
+      <h2>Женское здоровье — Авторская методика</h2>
+      <p>Укрепление мышц, дыхательные практики, медитации и техники расслабления с обратной связью.</p>
+      <span class="btn">Подробнее</span>
+    </a>
   </main>
+  <footer>
+    &copy; 2025 Школа Йоги. Все права защищены.
+  </footer>
 </body>
 </html>
-
