@@ -6,6 +6,60 @@
   <title>Школа Йоги — Курсы</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
+    .about-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1f4e79;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.about-button:hover {
+  background-color: #163a5c;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+}
+.close:hover {
+  color: #333;
+}
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -14,6 +68,7 @@
       line-height: 1.6;
     }
     header {
+      <button id="aboutBtn" class="about-button">О школе</button>
       background: #2c3e50;
       color: white;
       padding: 60px 20px;
@@ -141,6 +196,36 @@ main {
     &copy; 2025 Школа Йоги Надежды Теллиев. Все права защищены. <br>
     Контакты: <a href="mailto:info@yogashkola.ru">info@yogashkola.ru</a> | WhatsApp: +7 (999) 123-45-67
   </footer>
+  <div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>О школе</h2>
+    <p>
+      Школа Йоги Надежды Теллиев — это онлайн-пространство для глубокого изучения йоги.
+      Мы обучаем преподавателей, создаём авторские курсы по Хатха йоге, Аэройоге, Анатомии, Пранаямам и женскому здоровью.
+      Курсы основаны на знаниях тела, дыхания и тонких практик, объединяя традиции и современные подходы.
+    </p>
+    <p>
+      Связаться с нами: <br />
+      📧 <a href="mailto:yoga@example.com">yoga@example.com</a> <br />
+      📱 +7 900 000-00-00
+    </p>
+  </div>
+</div>
+  <script>
+  const modal = document.getElementById("aboutModal");
+  const btn = document.getElementById("aboutBtn");
+  const span = document.querySelector(".modal .close");
+
+  btn.onclick = () => modal.style.display = "block";
+  span.onclick = () => modal.style.display = "none";
+  window.onclick = (event) => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
 </body>
 </html>
 
