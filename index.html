@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Школа Йоги — Курсы</title>
-  <!-- Подключаем шрифт Poppins (мягкий и современный) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -14,24 +13,21 @@
       color: #2a3548;
       line-height: 1.6;
     }
-
     header {
-      background: #6da7d0; /* светло-синий */
+      background: #6da7d0;
       color: white;
       padding: 60px 20px 40px;
       text-align: center;
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       position: relative;
     }
-
     header h1 {
       margin: 0;
-      font-weight: 600; /* чуть мягче, чем 800 */
+      font-weight: 600;
       font-size: 2.8rem;
       letter-spacing: 0.8px;
       line-height: 1.1;
     }
-
     header .subtitle {
       margin-top: 12px;
       font-size: 1.3rem;
@@ -40,8 +36,6 @@
       letter-spacing: 0.4px;
       font-style: italic;
     }
-
-    /* Кнопка "О школе" */
     .about-button {
       position: absolute;
       top: 20px;
@@ -59,7 +53,6 @@
       background-color: #163a5c;
       transform: scale(1.05);
     }
-
     main {
       max-width: 1000px;
       margin: 40px auto;
@@ -78,7 +71,7 @@
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       cursor: pointer;
     }
     a.course-card:hover {
@@ -99,12 +92,11 @@
       color: #1f4e79;
     }
     .course-card p {
-  flex-grow: 1;
-  font-size: 1rem;
-  color: #5a5a5a;
-  margin: 0;
-}
-
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #5a5a5a;
+      margin: 0;
+    }
     footer {
       text-align: center;
       padding: 40px 20px 20px;
@@ -114,52 +106,14 @@
       margin-top: 60px;
       background-color: #eef4fb;
     }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(2px);
-    }
-    .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 30px 25px;
-      border-radius: 16px;
-      width: 90%;
-      max-width: 600px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      position: relative;
-      animation: fadeIn 0.3s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .close {
-      position: absolute;
-      top: 14px;
-      right: 18px;
-      font-size: 1.5rem;
-      color: #aaa;
-      cursor: pointer;
-    }
-    .close:hover {
-      color: #333;
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>Школа йоги онлайн</h1>
     <p class="subtitle">Учись. Преподавай. Расти.</p>
-    <!-- Добавляем кнопку О школе -->
-    <button id="aboutBtn" class="about-button">О школе</button>
+    <a href="about.html" class="about-button">О школе</a>
   </header>
-
   <main>
     <a href="hatha.html" class="course-card">
       <img src="images/IMG_2572.JPG" alt="Хатха йога" />
@@ -192,47 +146,9 @@
       <p>Методы безопасной и эффективной практики йоги во время беременности для будущих мам и преподавателей.</p>
     </a>
   </main>
-
   <footer>
     &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены. <br>
     Контакты: <a href="mailto:info@yogashkola.ru">info@yogashkola.ru</a> | WhatsApp: +7 (999) 123-45-67
   </footer>
-
-  <!-- Модальное окно "О школе" -->
-  <div id="aboutModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>О школе</h2>
-      <p>
-        Школа Йоги Надежды Теллиевой — это онлайн-пространство для глубокого изучения йоги.
-        Мы обучаем преподавателей, создаём авторские курсы по Хатха йоге, Аэройоге, Анатомии, Пранаямам и женскому здоровью.
-        Курсы основаны на знаниях тела, дыхания и тонких практик, объединяя традиции и современные подходы.
-      </p>
-      <p>
-        Связаться с нами: <br />
-        📧 <a href="mailto:info@yogashkola.ru">info@yogashkola.ru</a> <br />
-        📱 +7 (999) 123-45-67
-      </p>
-    </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById("aboutModal");
-    const btn = document.getElementById("aboutBtn");
-    const span = document.querySelector(".modal .close");
-
-    btn.onclick = () => {
-      modal.style.display = "block";
-    };
-    span.onclick = () => {
-      modal.style.display = "none";
-    };
-    window.onclick = (event) => {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    };
-  </script>
 </body>
 </html>
-
