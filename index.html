@@ -4,46 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Школа Йоги — Курсы</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- Подключаем шрифт Poppins (мягкий и современный) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    header h1 {
-  margin: 0;
-  font-weight: 800;
-  font-size: 2.4rem;
-  letter-spacing: 1px;
-}
-
-header .subtitle {
-  margin-top: 12px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #dce6f4;
-  letter-spacing: 0.5px;
-}
-
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       background: #f4f7fb;
       color: #2a3548;
       line-height: 1.6;
     }
-header {
-  background: #6da7d0; /* светло-синий, немного темнее */
-  color: white;
-  padding: 60px 20px 40px;
-  text-align: center;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
 
+    header {
+      background: #6da7d0; /* светло-синий */
+      color: white;
+      padding: 60px 20px 40px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
+
     header h1 {
       margin: 0;
-      font-weight: 800;
+      font-weight: 600; /* чуть мягче, чем 800 */
       font-size: 2.8rem;
-      letter-spacing: 1.1px;
+      letter-spacing: 0.8px;
+      line-height: 1.1;
     }
+
+    header .subtitle {
+      margin-top: 12px;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #dce6f4;
+      letter-spacing: 0.4px;
+      font-style: italic;
+    }
+
+    /* Кнопка "О школе" */
     .about-button {
       position: absolute;
       top: 20px;
@@ -97,7 +95,7 @@ header {
     .course-card h2 {
       margin: 0 0 12px;
       font-size: 1.4rem;
-      font-weight: 700;
+      font-weight: 600;
       color: #1f4e79;
     }
     .course-card p {
@@ -155,9 +153,11 @@ header {
 </head>
 <body>
   <header>
-  <h1>Школа йоги онлайн</h1>
-  <p class="subtitle">Учись. Преподавай. Расти.</p>
-</header>
+    <h1>Школа йоги онлайн</h1>
+    <p class="subtitle">Учись. Преподавай. Расти.</p>
+    <!-- Добавляем кнопку О школе -->
+    <button id="aboutBtn" class="about-button">О школе</button>
+  </header>
 
   <main>
     <a href="hatha.html" class="course-card">
@@ -197,6 +197,7 @@ header {
     Контакты: <a href="mailto:info@yogashkola.ru">info@yogashkola.ru</a> | WhatsApp: +7 (999) 123-45-67
   </footer>
 
+  <!-- Модальное окно "О школе" -->
   <div id="aboutModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -219,8 +220,12 @@ header {
     const btn = document.getElementById("aboutBtn");
     const span = document.querySelector(".modal .close");
 
-    btn.onclick = () => modal.style.display = "block";
-    span.onclick = () => modal.style.display = "none";
+    btn.onclick = () => {
+      modal.style.display = "block";
+    };
+    span.onclick = () => {
+      modal.style.display = "none";
+    };
     window.onclick = (event) => {
       if (event.target == modal) {
         modal.style.display = "none";
