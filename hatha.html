@@ -4,144 +4,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Хатха йога курс для преподавателей | Школа Йоги</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #f0f4f8;
-      color: #333;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 20px;
-    }
- header {
-      background: #2c3e50;
-      color: white;
-      padding: 60px 20px;
+      background: #f4f7fb;
+      color: #2a3548;
+      line-height: 1.6;
       text-align: center;
-      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+    }
+
+    header {
+      background: #3c5e87;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       margin: 0;
-      font-weight: 700;
-      font-size: 2.4rem;
-      letter-spacing: 1.1px;
+      font-weight: 800;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
     }
+
     main {
+      max-width: 800px;
       background: white;
-      padding: 30px 25px;
+      margin: 40px auto;
+      padding: 40px 30px;
       border-radius: 14px;
-      box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
     }
-    main h2 {
-      color: #2c6d5d;
+
+    h2 {
+      color: #1f4e79;
+      font-size: 1.8rem;
       margin-top: 0;
-      margin-bottom: 20px;
-      font-weight: 700;
     }
-    main ul {
+
+    p, li {
+      font-size: 1rem;
+      color: #444;
+      text-align: left;
+    }
+
+    ul {
       list-style-type: disc;
       padding-left: 20px;
-      color: #555;
-      font-size: 1.1rem;
-      line-height: 1.6;
+      margin: 20px auto;
+      display: inline-block;
+      text-align: left;
     }
-    main p.cost {
-      margin-top: 30px;
+
+    .cost {
       font-weight: 700;
       font-size: 1.3rem;
-      color: #3a8e7f;
-    }
-    a.back-link {
-      display: inline-block;
+      color: #1f4e79;
       margin-top: 30px;
-      text-decoration: none;
-      color: #3a8e7f;
-      font-weight: 600;
-      border: 2px solid #3a8e7f;
-      padding: 8px 14px;
-      border-radius: 10px;
-      transition: background-color 0.3s ease, color 0.3s ease;
     }
-    a.back-link:hover {
-      background-color: #3a8e7f;
-      color: white;
-    }
-    main img {
+
+    img {
       max-width: 100%;
       margin: 25px 0;
-      border-radius: 14px;
-      box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .button, .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #1f4e79;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      margin-right: 12px;
+    }
+
+    .button:hover, .back-link:hover {
+      background-color: #163c5d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 0.95rem;
+      color: #666;
+      background-color: #eef4fb;
+      margin-top: 60px;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #3c5e87;
+      text-decoration: none;
     }
   </style>
 </head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background: #f4f7fb;
-    color: #2a3548;
-    line-height: 1.6;
-  }
-  header {
-    background: #3c5e87; /* единый светло-синий фон */
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 800;
-    font-size: 2.6rem;
-    letter-spacing: 1px;
-  }
-  section, main {
-    max-width: 960px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  h2, h3 {
-    color: #1f4e79;
-  }
-  img {
-    max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  }
-  p {
-    font-size: 1rem;
-    color: #444;
-  }
-</style>
-
 <body>
+
   <header>
-  <h1>Хатха йога курс для Учителей</h1>
-</header>
+    <h1>Хатха йога курс для Учителей</h1>
+  </header>
+
   <main>
     <h2>Описание курса</h2>
     <p>Обучение для тех, кто хочет получить сильную базу в асанах и анатомии йоги, стать сертифицированным преподавателем по Хатха йоге.</p>
     <ul>
       <li>Базовая анатомия человека</li>
       <li>История и философия йоги</li>
-      <li>Базовые асаны Хатха йоги, 40 асан (отстройка, правка, эффекты и противопоказания)</li>
+      <li>Базовые асаны Хатха йоги (40 асан: отстройка, правка, эффекты и противопоказания)</li>
       <li>Бандхи</li>
       <li>Пранаямы</li>
       <li>Аюрведа (Гуны, Доши)</li>
     </ul>
     <p>Длительность обучения: 2 месяца, 29 уроков и домашних заданий, 6 онлайн консультаций и экзамен.</p>
     <p class="cost">Стоимость обучения: 40 000 рублей</p>
-    <a href="index.html" class="back-link">← Вернуться на главную</a>
-    <footer style="text-align:center; padding: 40px 20px 20px; font-size: 0.95rem; color: #666; background-color: #eef4fb; margin-top: 60px; border-top: 1px solid #ddd;">
-  &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены. <br>
-  Контакты: <a href="mailto:info@yogashkola.ru">info@yogashkola.ru</a> | WhatsApp: +7 (999) 123-45-67
-</footer>
 
+    <a href="#" class="button">Записаться</a>
+    <a href="index.html" class="back-link">Вернуться на главную</a>
   </main>
+
+  <footer>
+    &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены. <br>
+    Контакты: <a href="mailto:info@yogashkola.ru">info@yogashkola.ru</a> |
+    WhatsApp: +7 (999) 123-45-67
+  </footer>
+
 </body>
 </html>
