@@ -284,29 +284,34 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  slidesPerGroup: 1,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
       slidesPerView: 1,
-      spaceBetween: 20,
       slidesPerGroup: 1,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        600: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-        },
-        900: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-        },
-      },
-    });
+    },
+    600: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    900: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  },
+});
+
   </script>
 </body>
 </html>
