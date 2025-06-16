@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>О школе йоги</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Swiper CSS -->
@@ -83,7 +83,7 @@
       color: #555;
     }
 
-    /* Стили для Swiper отзывов */
+    /* Стили для Swiper и отзывов */
     .swiper {
       margin-top: 20px;
       padding-bottom: 40px;
@@ -92,18 +92,19 @@
     .swiper-slide {
       background: #fff;
       border-radius: 12px;
-      padding: 20px 25px;
+      padding: 16px 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       text-align: center;
+      height: auto !important;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
     }
 
     .swiper-slide p {
       font-style: italic;
       font-size: 0.95rem;
-      margin: 0 0 15px;
+      margin: 0 0 10px;
       flex-grow: 1;
     }
 
@@ -117,8 +118,8 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      justify-content: center;
       margin-top: 10px;
+      justify-content: center;
     }
 
     .review-profile img {
@@ -139,16 +140,16 @@
       color: #1f4e79;
     }
 
-    /* Кнопки стрелок Swiper */
-    .swiper-button-next,
-    .swiper-button-prev {
+    .swiper-button-prev,
+    .swiper-button-next {
       color: #1f4e79;
-      top: 45%;
+      top: auto;
+      bottom: 10px;
     }
 
     .swiper-pagination-bullet {
       background: #355c7d;
-      opacity: 0.6;
+      opacity: 0.7;
     }
 
     .swiper-pagination-bullet-active {
@@ -216,12 +217,13 @@
 
     <section>
       <h2>Отзывы учеников</h2>
+
       <!-- Swiper -->
-      <div class="swiper reviews">
+      <div class="swiper">
         <div class="swiper-wrapper">
+
           <div class="swiper-slide">
-            <p>«Хочу поблагодарить Надю за то, что именно она стала проводником в мир йоги, ибо если бы не она, я до сих пор бы думал, что суть йоги далеко не в укреплении организма и взаимодействии с ЦНС и тела.
-Спасибо, теперь я хочу больше знать и лучше работать»</p>
+            <p>«Хочу поблагодарить Надю за то, что именно она стала проводником в мир йоги, ибо если бы не она, я до сих пор бы думал, что суть йоги далеко не в укреплении организма и взаимодействии с ЦНС и тела. Спасибо, теперь я хочу больше знать и лучше работать»</p>
             <div class="review-profile">
               <img src="images/Miwa.jpg" alt="micke_zalata" />
               <a href="https://www.instagram.com/micke_zalata" target="_blank">@micke_zalata</a>
@@ -229,8 +231,7 @@
           </div>
 
           <div class="swiper-slide">
-            <p>«Хочу поблагодарить тебя за все знания, которые ты мне дала.
-Это такая мощная база, что сейчас даже я смотрю известных преподавателей, но понимаю что твоя подача была самой лучшей.»</p>
+            <p>«Хочу поблагодарить тебя за все знания, которые ты мне дала. Это такая мощная база, что сейчас даже я смотрю известных преподавателей, но понимаю что твоя подача была самой лучшей.»</p>
             <div class="review-profile">
               <img src="images/hypno.jpg" alt="hypno__trip" />
               <a href="https://www.instagram.com/hypno__trip/" target="_blank">@hypno__trip</a>
@@ -238,8 +239,7 @@
           </div>
 
           <div class="swiper-slide">
-            <p>«Я уже училась у Нади на курсах Хатха йоги и Пранаям. Теперь буду преподавать классы по Аэройоге.
-Очень рекомендую её»</p>
+            <p>«Я уже училась у Нади на курсах Хатха йоги и Пранаям. Теперь буду преподавать классы по Аэройоге. Очень рекомендую её»</p>
             <div class="review-profile">
               <img src="images/88yoga.jpg" alt="irysik013" />
               <a href="https://www.instagram.com/88.yoga.om/" target="_blank">@irysik013</a>
@@ -253,12 +253,13 @@
               <a href="https://www.instagram.com/lara_fit_more" target="_blank">@lara_fit_more</a>
             </div>
           </div>
+
         </div>
-        <!-- Навигация -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- Пагинация -->
+
+        <!-- Если нужно, включить пагинацию и стрелки -->
         <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 
@@ -285,6 +286,7 @@
     const swiper = new Swiper('.swiper', {
       slidesPerView: 1,
       spaceBetween: 20,
+      slidesPerGroup: 1,
       loop: true,
       pagination: {
         el: '.swiper-pagination',
@@ -297,11 +299,13 @@
       breakpoints: {
         600: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
         },
         900: {
           slidesPerView: 3,
-        }
-      }
+          slidesPerGroup: 3,
+        },
+      },
     });
   </script>
 </body>
