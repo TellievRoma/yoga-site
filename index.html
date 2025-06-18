@@ -41,6 +41,7 @@
       color: #dce6f4;
       letter-spacing: 0.4px;
     }
+    /* Кнопка О школе без подчеркивания */
     .about-button {
       position: absolute;
       top: 20px;
@@ -53,10 +54,15 @@
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s ease;
+      text-decoration: none; /* убираем подчеркивание */
+      display: inline-block;
+      text-align: center;
+      line-height: 1.2;
     }
     .about-button:hover {
       background-color: #163a5c;
       transform: scale(1.05);
+      text-decoration: none; /* на всякий случай */
     }
     main {
       max-width: 1000px;
