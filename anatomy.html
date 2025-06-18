@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-a...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Анатомия курс для преподавателей | Школа Йоги</title>
+  <title>Курс по анатомии | Школа Йоги</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- Подключаем Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-pb6LZf5kn0jsvKzmKzVQ9u+IsEcA6P3c3YlMkCrJHf+PYzPoS69Vf3dj+xY7guX+Lz4mM4+e9MgULhJ2dPsZ6Q==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    .social-icons {
-  margin-top: 25px;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 1.6rem;
-  color: white;
-  background-color: #1f4e79;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  line-height: 44px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.social-icons a:hover {
-  background-color: #163c5d;
-}
-
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -60,46 +41,62 @@
       padding: 40px 30px;
       border-radius: 14px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-      text-align: center;
+      text-align: left;
+      color: #444;
     }
 
     h2 {
       color: #1f4e79;
       font-size: 1.8rem;
       margin-top: 0;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    p, li {
+    p {
       font-size: 1rem;
-      color: #444;
-      text-align: left;
+      margin-bottom: 20px;
     }
 
     ul {
       list-style-type: disc;
       padding-left: 20px;
-      margin: 20px auto;
-      display: inline-block;
-      text-align: left;
+      margin: 0 0 30px 0;
+    }
+
+    ol {
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    .highlight-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .highlight-list li {
+      margin-bottom: 10px;
+    }
+
+    .section-divider {
+      border-top: 1px solid #ddd;
+      margin: 30px 0;
     }
 
     .cost {
       font-weight: 700;
       font-size: 1.3rem;
       color: #1f4e79;
-      margin-top: 30px;
+      margin-top: 10px;
+      text-align: center;
     }
 
-    img {
-      max-width: 100%;
-      margin: 25px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    .buttons-wrapper {
+      text-align: center;
+      margin-top: 25px;
     }
 
     .button, .back-link {
       display: inline-block;
-      margin-top: 25px;
       background-color: #1f4e79;
       color: white;
       padding: 12px 24px;
@@ -107,7 +104,9 @@
       text-decoration: none;
       font-weight: 600;
       transition: background-color 0.3s ease;
-      margin-right: 12px;
+      margin: 0 10px;
+      min-width: 140px;
+      box-sizing: border-box;
     }
 
     .button:hover, .back-link:hover {
@@ -127,52 +126,80 @@
     footer a {
       color: #3c5e87;
       text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      vertical-align: middle;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer a .fa-brands {
+      margin-right: 8px;
+      font-size: 1.3rem;
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Анатомия для учителей и тренеров</h1>
+    <h1>Курс по анатомии</h1>
   </header>
-    
-<main>
-  <h2>Описание курса</h2>
-  <p><strong>Глубокое погружение в анатомию тела для безопасных и осознанных тренировок.</strong></p>
-  <p><strong>Формат:</strong> онлайн, с личной проверкой домашних заданий</p>
-  <p><strong>Длительность:</strong> 6 недель</p>
 
-  <ul>
-    <li>📚 9 разделов, охватывающих анатомию на всех уровнях — от клетки до отдельных систем и целостного организма</li>
-    <li>🎥 30 видеоуроков — понятные, наглядные и последовательные</li>
-    <li>📒 Методическое пособие на 200 страниц, которое можно распечатать или заполнять в электронном виде</li>
-    <li>📝 Домашние задания после каждого раздела</li>
-    <li>✅ Пошаговое обучение по принципу “слоёв” — каждый новый раздел строится на предыдущем, что значительно облегчает усвоение материала</li>
-  </ul>
+  <main>
+    <h2>🧠 Глубокое погружение в анатомию тела</h2>
 
-  <h2>Особенности курса:</h2>
-  <ul>
-    <li>📌 Обратная связь: до тех пор, пока блок не будет усвоен и проверен — к следующему мы не переходим</li>
-    <li>🧠 Методика построена так, чтобы анатомия запоминалась легко и системно</li>
-    <li>👩‍🏫 Подходит для тех, кто хочет иметь полную структуру анатомии академического уровня</li>
-  </ul>
+    <p><strong>Формат:</strong> Онлайн, с личной проверкой домашних заданий</p>
+    <p><strong>Длительность:</strong> 6 недель</p>
 
-  <p class="cost">Стоимость обучения: 40 000 рублей</p>
+    <div class="section-divider"></div>
 
-  <a href="#" class="button">Записаться</a>
-  <a href="index.html" class="back-link">Вернуться на главную</a>
-</main>
+    <h3>📚 Что вас ждёт:</h3>
+    <ul>
+      <li>9 разделов, охватывающих анатомию на всех уровнях — от клетки до отдельных систем и целостного организма</li>
+      <li>30 видеоуроков — понятные, наглядные и последовательные</li>
+      <li>Методическое пособие на 200 страниц, которое можно распечатать или заполнять в электронном виде</li>
+      <li>Домашние задания после каждого раздела</li>
+      <li>Пошаговое обучение по принципу “слоёв” — каждый новый раздел строится на предыдущем, что облегчает усвоение материала</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h3>🔹 Особенности курса:</h3>
+    <ul>
+      <li>Обратная связь: до тех пор, пока блок не будет усвоен и проверен — к следующему не переходите</li>
+      <li>Методика построена так, чтобы анатомия запоминалась легко и системно</li>
+      <li>Подходит для тех, кто хочет иметь полную структуру анатомии академического уровня</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <p class="cost">💰 Стоимость обучения: 40 000 ₽</p>
+
+    <div class="buttons-wrapper">
+      <a href="#" class="button">Записаться</a>
+      <a href="index.html" class="back-link">Вернуться на главную</a>
+    </div>
+  </main>
 
   <footer>
-      <div class="social-icons">
-    <a href="https://t.me/School_yoga_online" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-    <a href="https://wa.me/66829017770" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  </div>
-  &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены. <br>
-  Контакты: WhatsApp: +66 (82) 901 7770
-
-</footer>
+    <p>
+      <a href="https://t.me/School_yoga_online" target="_blank" rel="noopener" title="Связаться в Telegram">
+        <i class="fab fa-telegram"></i> Telegram
+      </a>
+      |
+      <a href="https://wa.me/66829017770" target="_blank" rel="noopener" title="Связаться в WhatsApp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </p>
+    &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены.<br />
+    Контакты: WhatsApp: +66 (82) 901 7770
+  </footer>
 
 </body>
 </html>
+
 
