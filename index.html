@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Школа Йоги — Курсы</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Подключаем Nunito Italic Light -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -21,20 +22,24 @@
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
       position: relative;
     }
+    /* Шрифты для шапки */
     header h1 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 300;
+      font-style: italic;
       margin: 0;
-      font-weight: 600;
       font-size: 2.8rem;
       letter-spacing: 0.8px;
       line-height: 1.1;
     }
     header .subtitle {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 300;
+      font-style: italic;
       margin-top: 12px;
       font-size: 1.3rem;
-      font-weight: 400;
       color: #dce6f4;
       letter-spacing: 0.4px;
-      font-style: italic;
     }
     .about-button {
       position: absolute;
@@ -106,27 +111,18 @@
       margin-top: 60px;
       background-color: #eef4fb;
     }
-    .social-icons {
-      margin-bottom: 16px;
-    }
     .social-icons a {
-      margin: 0 10px;
-      display: inline-block;
-      width: 28px;
-      height: 28px;
-      vertical-align: middle;
+      margin: 0 8px;
+      color: #1f4e79;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
     }
-    .social-icons svg {
-      width: 100%;
-      height: 100%;
-      fill: #1f4e79;
-      transition: transform 0.3s ease, fill 0.3s ease;
-    }
-    .social-icons a:hover svg {
-      fill: #355c7d;
-      transform: scale(1.1);
+    .social-icons a:hover {
+      color: #163a5c;
     }
   </style>
+  <!-- Подключение FontAwesome для иконок соцсетей -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -168,20 +164,13 @@
   </main>
   <footer>
     <div class="social-icons">
-      <a href="https://t.me/School_yoga_online" target="_blank" title="Telegram">
-        <svg viewBox="0 0 24 24">
-          <path d="M9.993 16.83c-.38 0-.315-.14-.446-.495l-1.123-3.708 8.596-5.11c.39-.224.677-.1.546.36L15.36 17.004c-.1.37-.31.46-.63.29l-2.39-1.76-1.15 1.1c-.11.11-.21.21-.43.21zm-2.2-4.29 1.23 3.65.21-.01 1.16-1.11 2.58 1.91 2.75-9.44-7.93 4.9z" />
-        </svg>
-      </a>
-      <a href="https://wa.me/66829017770" target="_blank" title="WhatsApp">
-        <svg viewBox="0 0 32 32">
-          <path d="M16.004 5.333c5.89 0 10.667 4.777 10.667 10.667 0 2.72-1.02 5.212-2.695 7.124l.59 3.452-3.526-.567a10.619 10.619 0 0 1-5.036 1.276c-5.89 0-10.667-4.777-10.667-10.667S10.114 5.333 16.004 5.333zm0-2.667C8.636 2.666 2.67 8.632 2.67 16s5.966 13.334 13.334 13.334c2.016 0 3.911-.495 5.597-1.372l5.743.923-1.06-6.23A13.29 13.29 0 0 0 29.338 16c0-7.368-5.966-13.334-13.334-13.334zM10.36 11.718l1.294-.345c.208-.056.43.047.52.247l.976 2.153a.472.472 0 0 1-.122.553l-.827.765a7.51 7.51 0 0 0 3.668 3.67l.764-.827a.472.472 0 0 1 .553-.122l2.153.976a.484.484 0 0 1 .248.52l-.346 1.294a.492.492 0 0 1-.49.364c-4.382 0-7.929-3.547-7.929-7.93a.492.492 0 0 1 .345-.49z" />
-        </svg>
-      </a>
+      <a href="https://t.me/School_yoga_online" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://wa.me/66829017770" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
     &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены. <br>
     Контакты: WhatsApp: +66 (82) 901 7770
   </footer>
 </body>
 </html>
+
 
