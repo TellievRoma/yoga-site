@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>О школе йоги</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Swiper CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-  />
-
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -28,6 +20,26 @@
       padding: 60px 20px 40px;
       text-align: center;
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .social-icons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.15);
     }
 
     header h1 {
@@ -83,35 +95,29 @@
       color: #555;
     }
 
-    /* Стили для Swiper и отзывов */
-    .swiper {
-      margin-top: 20px;
-      padding-bottom: 40px;
+    .reviews-carousel {
+      overflow-x: auto;
+      display: flex;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 0 20px;
+      padding: 10px 0;
     }
 
-    .swiper-slide {
+    .review-card {
+      flex: 0 0 300px;
       background: #fff;
       border-radius: 12px;
       padding: 16px 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       text-align: center;
-      height: auto !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      scroll-snap-align: center;
     }
 
-    .swiper-slide p {
+    .review-card p {
       font-style: italic;
       font-size: 0.95rem;
       margin: 0 0 10px;
-      flex-grow: 1;
-    }
-
-    .swiper-slide span {
-      display: block;
-      font-size: 0.9rem;
-      color: #1f4e79;
     }
 
     .review-profile {
@@ -138,23 +144,6 @@
 
     .review-profile a:hover {
       color: #1f4e79;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: #1f4e79;
-      top: auto;
-      bottom: 10px;
-    }
-
-    .swiper-pagination-bullet {
-      background: #355c7d;
-      opacity: 0.7;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: #1f4e79;
-      opacity: 1;
     }
 
     .back-button {
@@ -187,6 +176,14 @@
 </head>
 <body>
   <header>
+    <div class="social-icons">
+      <a href="https://t.me/School_yoga_online" target="_blank">
+        <img src="images/telegram-icon.svg.jpg" alt="Telegram">
+      </a>
+      <a href="https://wa.me/66829017770" target="_blank">
+        <img src="images/whatsapp-icon.svg.jpg" alt="WhatsApp">
+      </a>
+    </div>
     <h1>О Школе Йоги</h1>
   </header>
 
@@ -203,12 +200,12 @@
       <h2>Преподаватели</h2>
       <div class="teachers">
         <div class="teacher-card">
-          <img src="images/Nadezhda.JPG" alt="Надежда Теллиева" />
+          <img src="images/nadezhda.jpg" alt="Надежда Теллиева" />
           <h3>Надежда Теллиева</h3>
           <p>Основатель школы, преподаватель хатха йоги и аэройоги, специалист по женскому здоровью. Более 10 лет опыта.</p>
         </div>
         <div class="teacher-card">
-          <img src="images/Roman.JPG" alt="Преподаватель анатомии" />
+          <img src="images/teacher-anatomy.jpg" alt="Преподаватель анатомии" />
           <h3>Теллиев Роман</h3>
           <p>Преподаватель анатомии и физиологии. Выпускник КГУФКСТ. Более 10 лет опыта в фитнесе. Действующий тренер и преподаватель.</p>
         </div>
@@ -217,66 +214,40 @@
 
     <section>
       <h2>Отзывы учеников</h2>
+      <div class="reviews-carousel">
 
-      <!-- Swiper -->
-      <div class="swiper">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <p>«Хочу поблагодарить Надю за то, что именно она стала проводником в мир йоги, ибо если бы не она, я до сих пор бы думал, что суть йоги далеко не в укреплении организма и взаимодействии с ЦНС и тела. Спасибо, теперь я хочу больше знать и лучше работать»</p>
-            <div class="review-profile">
-              <img src="images/Miwa.jpg" alt="micke_zalata" />
-              <a href="https://www.instagram.com/micke_zalata" target="_blank">@micke_zalata</a>
-            </div>
+        <div class="review-card">
+          <p>«Хочу поблагодарить Надю за то, что именно она стала проводником в мир йоги...»</p>
+          <div class="review-profile">
+            <img src="images/Miwa.jpg" alt="micke_zalata">
+            <a href="https://www.instagram.com/micke_zalata" target="_blank">@micke_zalata</a>
           </div>
-
-          <div class="swiper-slide">
-            <p>«Кто хочет познать йогу, я рекомендую школу Нади. Любовь с первого взгляда!»</p>
-            <div class="review-profile">
-              <img src="images/annapp.jpg" alt="anna_na.pp_" />
-              <a href="https://www.instagram.com/anna_na.pp_" target="_blank">@anna_na.pp_</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <p>«Хочу поблагодарить тебя за все знания, которые ты мне дала. Это такая мощная база, что сейчас даже я смотрю известных преподавателей, но понимаю что твоя подача была самой лучшей.»</p>
-            <div class="review-profile">
-              <img src="images/hypno.jpg" alt="hypno__trip" />
-              <a href="https://www.instagram.com/hypno__trip/" target="_blank">@hypno__trip</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <p>«Я хочу поблагодарить свою дорогую и замечательную @school_yoga_online за обучение на курсе ХАТХА ЙОГА. Мне нужен был человек, который научит, как понять эту информацию, как ей правильно пользоваться. Также хочу поблагодарить
-@roman_telliev за вводный курс АНАТОМИИ И БИОМЕХАНИКИ. Спасибо Вселенной за наше прекрасное знакомство и сотрудничество»</p>
-            <div class="review-profile">
-              <img src="images/ryz.jpg" alt="ryzhkovanataly" />
-              <a href="https://www.instagram.com/ryzhkovanataly/" target="_blank">@ryzhkovanataly</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <p>«Я уже училась у Нади на курсах Хатха йоги и Пранаям. Теперь буду преподавать классы по Аэройоге. Очень рекомендую её»</p>
-            <div class="review-profile">
-              <img src="images/88yoga.jpg" alt="irysik013" />
-              <a href="https://www.instagram.com/88.yoga.om/" target="_blank">@irysik013</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <p>«Курс был невероятным, чувствуется глубина, энергия и любовь, которую вы вложили!»</p>
-            <div class="review-profile">
-              <img src="images/lara.jpg" alt="lara_fit_more" />
-              <a href="https://www.instagram.com/lara_fit_more" target="_blank">@lara_fit_more</a>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Если нужно, включить пагинацию и стрелки -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="review-card">
+          <p>«Хочу поблагодарить тебя за все знания, которые ты мне дала...»</p>
+          <div class="review-profile">
+            <img src="images/hypno.jpg" alt="hypno__trip">
+            <a href="https://www.instagram.com/hypno__trip/" target="_blank">@hypno__trip</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Я уже училась у Нади на курсах Хатха йоги и Пранаям...»</p>
+          <div class="review-profile">
+            <img src="images/88yoga.jpg" alt="irysik013">
+            <a href="https://www.instagram.com/88.yoga.om/" target="_blank">@irysik013</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Курс был невероятным, чувствуется глубина, энергия и любовь...»</p>
+          <div class="review-profile">
+            <img src="images/lara.jpg" alt="lara_fit_more">
+            <a href="https://www.instagram.com/lara_fit_more" target="_blank">@lara_fit_more</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -296,42 +267,9 @@
   <footer>
     &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены.
   </footer>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  slidesPerGroup: 1,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-    },
-    600: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-    900: {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-    },
-  },
-});
-
-  </script>
 </body>
 </html>
+
 
 
 
