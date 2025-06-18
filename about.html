@@ -31,15 +31,23 @@
       gap: 14px;
     }
 
-    .social-icons img {
+    .social-icons a {
+      display: inline-block;
       width: 32px;
       height: 32px;
       cursor: pointer;
       transition: transform 0.3s ease;
+      color: white;
     }
 
-    .social-icons img:hover {
+    .social-icons a:hover {
       transform: scale(1.15);
+    }
+
+    .social-icons svg {
+      fill: white;
+      width: 100%;
+      height: 100%;
     }
 
     header h1 {
@@ -176,12 +184,19 @@
 </head>
 <body>
   <header>
-     <footer>
-      <div class="social-icons">
-    <a href="https://t.me/School_yoga_online" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-    <a href="https://wa.me/66829017770" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-  </div>
     <h1>О Школе Йоги</h1>
+    <div class="social-icons">
+      <a href="https://t.me/School_yoga_online" target="_blank" title="Telegram" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22.5 2.5L1.5 10.5l5.8 2.2 1.7 5.3 2.5-4 4.5 3.3 5.5-14.8zM9.6 15.7l-.8-2.8 9.1-7.1-11.5 6.3 1.2 1.5 1 1.1z"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/66829017770" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20.5 3.5a9 9 0 0 0-15.6 9.2l-1.4 5 5-1.4a9 9 0 1 0 11 0zm-8.3 8a2.4 2.4 0 0 1-1.3-.4l-.7-.7a.7.7 0 0 1 0-1l.6-.7a.7.7 0 0 0 0-1l-1-1a.7.7 0 0 0-1 0l-.8.8a2.6 2.6 0 0 0 1.8 4.4 2.4 2.4 0 0 0 1.3-.4l.7-.6a.7.7 0 0 0 0-1l-.6-.7z"/>
+        </svg>
+      </a>
+    </div>
   </header>
 
   <main>
@@ -210,80 +225,35 @@
     </section>
 
     <section>
-  <h2>Отзывы учеников</h2>
-  <div class="reviews-carousel">
+      <h2>Отзывы учеников</h2>
+      <div class="reviews-carousel">
+        <div class="review-card">
+          <p>«Хочу поблагодарить Надю за то, что именно она стала проводником в мир йоги, если бы не она, я до сих пор бы думал, что йога далеко не в укреплении организма и взаимодействии с ЦНС и тела. Спасибо, теперь я хочу больше знать и лучше работать»</p>
+          <div class="review-profile">
+            <img src="images/Miwa.jpg" alt="micke_zalata">
+            <a href="https://instagram.com/micke_zalata" target="_blank" rel="noopener">micke_zalata</a>
+          </div>
+        </div>
 
-    <div class="review-card">
-      <p>«Хочу поблагодарить Надю за то, что именно она стала проводником в мир йоги, если бы не она, я до сих пор бы думал, что йога далеко не в укреплении организма и взаимодействии с ЦНС и тела. Спасибо, теперь я хочу больше знать и лучше работать»</p>
-      <div class="review-profile">
-        <img src="images/Miwa.jpg" alt="micke_zalata">
-        <a href="https://www.instagram.com/micke_zalata" target="_blank">@micke_zalata</a>
+        <div class="review-card">
+          <p>«Надя, твоя программа и подача просто супер! Для меня это огромный скачок в моем личном развитии»</p>
+          <div class="review-profile">
+            <img src="images/Polina.jpeg" alt="polina_tyu">
+            <a href="https://instagram.com/polina_tyu" target="_blank" rel="noopener">polina_tyu</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Каждое занятие дает очень много новых знаний и навыков. Ты умеешь интересно рассказывать, передавать свой опыт и профессионализм»</p>
+          <div class="review-profile">
+            <img src="images/Yana.jpeg" alt="yana_zzz">
+            <a href="https://instagram.com/yana_zzz" target="_blank" rel="noopener">yana_zzz</a>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="review-card">
-      <p>«Я хочу поблагодарить свою дорогую и замечательную @school_yoga_online за обучение на курсе ХАТХА ЙОГА. Мне нужен был человек, который научит, как понять эту информацию, как ей правильно пользоваться. Также хочу поблагодарить @roman_telliev за вводный курс АНАТОМИИ И БИОМЕХАНИКИ. Спасибо Вселенной за наше прекрасное знакомство и сотрудничество»</p>
-      <div class="review-profile">
-        <img src="images/ryz.jpg" alt="ryzhkovanataly" />
-        <a href="https://www.instagram.com/ryzhkovanataly/" target="_blank">@ryzhkovanataly</a>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <p>«Хочу оставить отзыв и поблагодарить Надю и Романа за столь интересный курс, я получило то, что хотела. Много знаний, много практики и много положительных эмоций»</p>
-      <div class="review-profile">
-        <img src="images/kseniya.jpg" alt="ksenia_yoga_practice">
-        <a href="https://www.instagram.com/ksenia_yoga_practice" target="_blank">ksenia_yoga_practice</a>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <p>«Хочу поблагодарить тебя за все знания, которые ты мне дала. Это такая мощная база, что сейчас даже я смотрю известных преподавателей, но понимаю что твоя подача была самой лучшей»</p>
-      <div class="review-profile">
-        <img src="images/hypno.jpg" alt="hypno__trip">
-        <a href="https://www.instagram.com/hypno__trip/" target="_blank">@hypno__trip</a>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <p>«Кто хочет познать йогу, я рекомендую школу Нади. Любовь с первого взгляда!»</p>
-      <div class="review-profile">
-        <img src="images/annapp.jpg" alt="anna_na.pp_" />
-        <a href="https://www.instagram.com/anna_na.pp_" target="_blank">@anna_na.pp_</a>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <p>«Я уже училась у Нади на курсах Хатха йоги и Пранаям. Теперь буду преподавать классы по Аэройоге. Очень рекомендую её»</p>
-      <div class="review-profile">
-        <img src="images/88yoga.jpg" alt="irysik013">
-        <a href="https://www.instagram.com/88.yoga.om/" target="_blank">@irysik013</a>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <p>«Надежда помогла полюбить гамаки с первого взгляда. Спасибо тебе за знания и огромный опыт»</p>
-      <div class="review-profile">
-        <img src="images/lara.jpg" alt="lara_fit_more">
-        <a href="https://www.instagram.com/lara_fit_more" target="_blank">@lara_fit_more</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <section>
-      <h2>Контакты</h2>
-      <p>
-        📧 Email: <a href="mailto:info@yogashkola.ru">info@yogashkola.ru</a><br />
-        📱 WhatsApp: +7 (999) 123-45-67
-      </p>
     </section>
 
-    <div style="text-align: center;">
-      <a href="index.html" class="back-button">← Вернуться на главную</a>
-    </div>
+    <a href="index.html" class="back-button">Вернуться на главную страницу</a>
   </main>
 
   <footer>
