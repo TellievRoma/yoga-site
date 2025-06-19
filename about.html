@@ -388,6 +388,93 @@
     &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены.
   </footer>
 
+  <!-- Модальное окно -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Закрыть">&times;</button>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-position"></div>
+      <img class="modal-photo" alt="" />
+      <p class="modal-description"></p>
+      <h3 class="certificates-title">Дипломы и сертификаты</h3>
+      <div class="certificates"></div>
+    </div>
+  </div>
+
+  <script>
+    const teachersData = {
+      nadezhda: {
+        name: "Надежда Теллиева",
+        position: "Основатель школы, преподаватель хатха йоги и аэройоги",
+        photo: "images/Nadezhda_large.JPG",
+        description: `Надежда — опытный преподаватель с более чем 10 годами практики.
+Специализируется на хатха йоге, аэройоге и женском здоровье.
+Основатель онлайн школы йоги.`,
+        certificates: [
+          "images/certificates/nadezhda_cert1.jpg",
+          "images/certificates/nadezhda_cert2.jpg"
+        ]
+      },
+      roman: {
+        name: "Роман Теллиев",
+        position: "Преподаватель анатомии и физиологии",
+        photo: "images/Roman_large.JPG",
+        description: `Роман — специалист с большим опытом в фитнесе и преподавании анатомии.
+Выпускник КГУФКСТ.
+Преподает правильную технику и биомеханику.`,
+        certificates: [
+          "images/certificates/roman_cert1.jpg",
+          "images/certificates/roman_cert2.jpg"
+        ]
+      }
+    };
+
+    const modal = document.getElementById('modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalTitle = modal.querySelector('.modal-title');
+    const modalPosition = modal.querySelector('.modal-position');
+    const modalPhoto = modal.querySelector('.modal-photo');
+    const modalDescription = modal.querySelector('.modal-description');
+    const modalCertificates = modal.querySelector('.certificates');
+
+    document.querySelectorAll('.teacher-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const teacherKey = card.dataset.teacher;
+        const data = teachersData[teacherKey];
+
+        if (!data) return;
+
+        modalTitle.textContent = data.name;
+        modalPosition.textContent = data.position;
+        modalPhoto.src = data.photo;
+        modalPhoto.alt = data.name;
+        modalDescription.textContent = data.description;
+
+        modalCertificates.innerHTML = data.certificates.map(src =>
+          `<img src="${src}" alt="Сертификат ${data.name}" />`
+        ).join('');
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
+
+
   <!-- Мод
 
 
