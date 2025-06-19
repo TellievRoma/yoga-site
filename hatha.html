@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Хатха йога курс для преподавателей | Школа Йоги</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <!-- Подключаем Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pb6LZf5kn0jsvKzmKzVQ9u+IsEcA6P3c3YlMkCrJHf+PYzPoS69Vf3dj+xY7guX+Lz4mM4+e9MgULhJ2dPsZ6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -71,6 +70,7 @@
       list-style: none;
       padding-left: 0;
     }
+
     .highlight-list li {
       margin-bottom: 10px;
     }
@@ -91,6 +91,10 @@
     .buttons-wrapper {
       text-align: center;
       margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
     }
 
     .button, .back-link {
@@ -102,13 +106,20 @@
       text-decoration: none;
       font-weight: 600;
       transition: background-color 0.3s ease;
-      margin: 0 10px;
       min-width: 140px;
       box-sizing: border-box;
+      text-align: center;
     }
 
     .button:hover, .back-link:hover {
       background-color: #163c5d;
+    }
+
+    @media (max-width: 480px) {
+      .buttons-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     footer {
@@ -221,6 +232,7 @@
 
 </body>
 </html>
+
 
 
 
