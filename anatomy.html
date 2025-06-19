@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Курс по анатомии | Школа Йоги</title>
+  <title>Анатомия для преподавателей йоги | Школа Йоги</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <!-- Подключаем Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-        integrity="sha512-pb6LZf5kn0jsvKzmKzVQ9u+IsEcA6P3c3YlMkCrJHf+PYzPoS69Vf3dj+xY7guX+Lz4mM4+e9MgULhJ2dPsZ6Q==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -58,24 +55,9 @@
       margin-bottom: 20px;
     }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin: 0 0 30px 0;
-    }
-
-    ol {
+    ul, ol {
       padding-left: 20px;
       margin-bottom: 30px;
-    }
-
-    .highlight-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .highlight-list li {
-      margin-bottom: 10px;
     }
 
     .section-divider {
@@ -87,21 +69,12 @@
       font-weight: 700;
       font-size: 1.3rem;
       color: #1f4e79;
-      margin-top: 10px;
       text-align: center;
-    }
-
-    .buttons-wrapper {
-      text-align: center;
-      margin-top: 25px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
     }
 
     .button, .back-link {
       display: inline-block;
+      margin-top: 25px;
       background-color: #1f4e79;
       color: white;
       padding: 12px 24px;
@@ -109,8 +82,7 @@
       text-decoration: none;
       font-weight: 600;
       transition: background-color 0.3s ease;
-      min-width: 140px;
-      box-sizing: border-box;
+      margin-right: 12px;
     }
 
     .button:hover, .back-link:hover {
@@ -130,20 +102,43 @@
     footer a {
       color: #3c5e87;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      vertical-align: middle;
+      margin: 0 10px;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    .social-icons {
+      margin-bottom: 10px;
     }
 
-    footer a .fa-brands {
-      margin-right: 8px;
+    .social-icons a {
+      margin: 0 8px;
       font-size: 1.3rem;
-      vertical-align: middle;
+      color: #3c5e87;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #1f4e79;
+    }
+
+    /* Стили для видео */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 14px;
     }
   </style>
 </head>
@@ -156,18 +151,23 @@
   <main>
     <h2>🧠 Глубокое погружение в анатомию тела</h2>
 
-  <!-- ВСТАВЛЯЕМ ПЕРЕД <p><strong>Формат:</strong> -->
-     <div class="video-container">
-       <iframe src="https://www.youtube.com/embed/ID_ВИДЕО" 
-           title="Видео о курсе Анатомия" 
-           frameborder="0" 
-           allowfullscreen></iframe>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/NXhM5C2xY4g" 
+              title="Видео о курсе Анатомия йоги" 
+              frameborder="0" 
+              allowfullscreen></iframe>
     </div>
-
-
 
     <p><strong>Формат:</strong> Видеоуроки, с личной проверкой домашних заданий</p>
     <p><strong>Длительность:</strong> 6 недель</p>
+
+    <h3>🔹Для кого курс:</h3>
+    <ul>
+      <li>Подходит для тех, кто хочет иметь полную структуру анатомии академического уровня</li>
+      <li>Тем, кто хочет глубже понять тело и избежать травм в практике</li>
+      <li>Тем, кто преподаёт или собирается преподавать йогу</li>
+      <li>Тем, кто хочет уверенно работать с учениками разного уровня подготовки</li>
+    </ul>
 
     <div class="section-divider"></div>
 
@@ -177,39 +177,37 @@
       <li>✅30 видеоуроков — понятные, наглядные и последовательные</li>
       <li>✅Методическое пособие на 200 страниц с иллюстрациями мышц и органов, которое можно распечатать или заполнять в электронном виде</li>
       <li>✅Домашние задания после каждого раздела</li>
-      <li>✅Пошаговое обучение по принципу “слоёв” — каждый новый раздел строится на предыдущем, что облегчает усвоение материала</li>
+      <li>✅Пошаговое обучение по принципу “слоёв” — каждый новый раздел строится на предыдущем, что облегчает усвоение материала Сертификат по завершению</li>
+      <li>✅Сертификат по завершению</li>
     </ul>
 
     <div class="section-divider"></div>
 
-    <h3>🔹 Особенности курса:</h3>
+    <h3>🔹 Вы узнаете:</h3>
     <ul>
-      <li>Обратная связь: до тех пор, пока блок не будет узучен — к следующему блоку не переходите</li>
-      <li>Методика построена так, чтобы анатомия запоминалась легко и системно</li>
-      <li>Подходит для тех, кто хочет иметь полную структуру анатомии академического уровня</li>
+      <li>— Как работают мышцы и суставы</li>
+      <li>— Как работают мышцы и суставы</li>
+      <li>— Как адаптировать практику под особенности ученика</li>
+      <li>— Что делать при ограничениях в подвижности</li>
+      <li>— Как строить безопасные занятия</li>
     </ul>
 
     <div class="section-divider"></div>
 
     <p class="cost">💰 Стоимость: 40 000 ₽</p>
 
-    <div class="buttons-wrapper">
+    <div style="text-align: center;">
       <a href="#" class="button">Записаться</a>
       <a href="index.html" class="back-link">Вернуться на главную</a>
     </div>
   </main>
 
   <footer>
-    <p>
-      <a href="https://t.me/School_yoga_online" target="_blank" rel="noopener" title="Связаться в Telegram">
-        <i class="fab fa-telegram"></i> Telegram
-      </a>
-      |
-      <a href="https://wa.me/66829017770" target="_blank" rel="noopener" title="Связаться в WhatsApp">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-    </p>
-    &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены.<br />
+    <div class="social-icons">
+      <a href="https://t.me/School_yoga_online" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://wa.me/66829017770" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены. <br>
     Контакты: WhatsApp: +66 (82) 901 7770
   </footer>
 
