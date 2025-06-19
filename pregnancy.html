@@ -115,6 +115,26 @@
       background-color: #163c5d;
     }
 
+    /* Видео-контейнер для адаптивного видео */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      margin: 0 0 30px 0; /* отступ снизу для разделения от текста */
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 14px;
+    }
+
     footer {
       text-align: center;
       padding: 40px 20px 20px;
@@ -153,6 +173,13 @@
 
   <main>
     <h2>🤰 Курс «Йога для беременных»</h2>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+              title="Видео о курсе Йога для беременных" 
+              frameborder="0" 
+              allowfullscreen></iframe>
+    </div>
 
     <p><strong>Формат:</strong> Онлайн | 6 недель | 20 уроков | Сертификат по итогам</p>
 
