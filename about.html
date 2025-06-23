@@ -81,7 +81,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       padding: 20px;
       text-align: center;
-      cursor: pointer;
+      /* убрал cursor pointer, чтобы не путать */
       transition: transform 0.2s ease;
     }
     .teacher-card:hover {
@@ -106,6 +106,23 @@
       margin: 0;
       font-size: 0.95rem;
       color: #555;
+    }
+
+    .btn-more {
+      margin-top: 12px;
+      padding: 10px 18px;
+      background-color: #1f4e79;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-more:hover {
+      background-color: #163a5c;
+      transform: scale(1.05);
     }
 
     .reviews-carousel {
@@ -261,19 +278,16 @@
     }
     .certificates {
       display: flex;
-      overflow-x: auto;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 12px;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
-      scroll-snap-type: x mandatory;
     }
     .certificates img {
-      max-height: 160px;
+      max-width: 140px;
       border-radius: 8px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
       cursor: pointer;
       transition: transform 0.3s ease;
-      scroll-snap-align: center;
     }
     .certificates img:hover {
       transform: scale(1.05);
@@ -313,11 +327,13 @@
           <img src="images/Nadezhda.JPG" alt="Надежда Теллиева" />
           <h3>Надежда Теллиева</h3>
           <p>Основатель школы, преподаватель хатха йоги и аэройоги, специалист по женскому здоровью. Более 10 лет опыта.</p>
+          <button class="btn-more" type="button">Подробнее</button>
         </div>
         <div class="teacher-card" data-teacher="roman">
           <img src="images/Roman.JPG" alt="Преподаватель анатомии" />
           <h3>Роман Теллиев</h3>
           <p>Преподаватель анатомии и физиологии. Выпускник КГУФКСТ. Более 10 лет опыта в фитнесе. Действующий тренер и преподаватель.</p>
+          <button class="btn-more" type="button">Подробнее</button>
         </div>
       </div>
     </section>
@@ -329,7 +345,7 @@
         <div class="review-card">
           <p>«Хочу поблагодарить Надю за то, что именно она стала проводником в мир йоги, если бы не она, я до сих пор бы думал, что йога далеко не в укреплении организма и взаимодействии с ЦНС и тела. Спасибо, теперь я хочу больше знать и лучше работать»</p>
           <div class="review-profile">
-            <img src="images/Miwa.jpg" alt="micke_zalata">
+            <img src="images/Miwa.jpg" alt="micke_zalata" />
             <a href="https://www.instagram.com/micke_zalata" target="_blank">@micke_zalata</a>
           </div>
         </div>
@@ -345,7 +361,7 @@
         <div class="review-card">
           <p>«Хочу оставить отзыв и поблагодарить Надю и Романа за столь интересный курс, я получило то, что хотела. Много знаний, много практики и много положительных эмоций»</p>
           <div class="review-profile">
-            <img src="images/kseniya.jpg" alt="ksenia_yoga_practice">
+            <img src="images/kseniya.jpg" alt="ksenia_yoga_practice" />
             <a href="https://www.instagram.com/ksenia_yoga_practice" target="_blank">ksenia_yoga_practice</a>
           </div>
         </div>
@@ -353,7 +369,7 @@
         <div class="review-card">
           <p>«Хочу поблагодарить тебя за все знания, которые ты мне дала. Это такая мощная база, что сейчас даже я смотрю известных преподавателей, но понимаю что твоя подача была самой лучшей»</p>
           <div class="review-profile">
-            <img src="images/hypno.jpg" alt="hypno__trip">
+            <img src="images/hypno.jpg" alt="hypno__trip" />
             <a href="https://www.instagram.com/hypno__trip/" target="_blank">@hypno__trip</a>
           </div>
         </div>
@@ -369,7 +385,7 @@
         <div class="review-card">
           <p>«Я уже училась у Нади на курсах Хатха йоги и Пранаям. Теперь буду преподавать классы по Аэройоге. Очень рекомендую её»</p>
           <div class="review-profile">
-            <img src="images/88yoga.jpg" alt="irysik013">
+            <img src="images/88yoga.jpg" alt="irysik013" />
             <a href="https://www.instagram.com/88.yoga.om/" target="_blank">@irysik013</a>
           </div>
         </div>
@@ -377,77 +393,71 @@
         <div class="review-card">
           <p>«Надежда помогла полюбить гамаки с первого взгляда. Спасибо тебе за знания и огромный опыт»</p>
           <div class="review-profile">
-            <img src="images/lara.jpg" alt="lara_fit_more">
+            <img src="images/lara.jpg" alt="lara_fit_more" />
             <a href="https://www.instagram.com/lara_fit_more" target="_blank">@lara_fit_more</a>
           </div>
         </div>
       </div>
     </section>
 
-    <a href="index.html" class="back-button">Вернуться на главную страницу</a>
+    <a href="/" class="back-button">На главную</a>
   </main>
 
   <footer>
-    &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены.
+    © 2025 Школа Йоги Надежды Теллиевой
   </footer>
 
   <!-- Модальное окно -->
   <div class="modal-overlay" id="modal">
-    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" id="modal-close" aria-label="Закрыть">&times;</button>
-      <h2 class="modal-title" id="modal-title"></h2>
-      <p class="modal-position"></p>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Закрыть">&times;</button>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <h3 class="modal-position"></h3>
       <img src="" alt="" class="modal-photo" />
       <p class="modal-description"></p>
-      <div>
-        <h3 class="certificates-title">Сертификаты</h3>
-        <div class="certificates"></div>
-      </div>
+      <div class="certificates-title">Сертификаты</div>
+      <div class="certificates"></div>
     </div>
   </div>
 
   <script>
     const teachersData = {
       nadezhda: {
-        name: "Надежда Теллиева",
-        position: "Основатель школы, преподаватель Хатха йоги и Аэройоги",
-        photo: "images/Nadezhda.JPG",
-        description: `Преподаёт более 10 лет. Специалист по женскому здоровью и автор курсов. Обладает глубокими знаниями и личным опытом в практике йоги.`,
+        name: 'Надежда Теллиева',
+        position: 'Основатель школы, преподаватель хатха йоги и аэройоги',
+        photo: 'images/Nadezhda.JPG',
+        description: `Более 10 лет опыта преподавания хатха йоги и аэройоги. Специалист по женскому здоровью.\n\nАвтор уникальных курсов и программ для начинающих и преподавателей. Главная цель — помочь каждому найти гармонию тела и души через практику йоги.`,
         certificates: [
-          "images/certificatesnadezhda_cert1.png",
-          "images/certificatesnadezhda_cert2.png",
-          "images/certificatesnadezhda_cert3.png",
-          "images/certificatesnadezhda_cert4.png",
-          "images/certificatesnadezhda_cert5.png",
-          "images/certificatesnadezhda_cert6.png",
-          "images/certificatesnadezhda_cert7.png",
-          "images/certificatesnadezhda_cert8.png",
-          "images/certificatesnadezhda_cert9.png",
-          "images/certificatesnadezhda_cert10.png"
+          'images/certificate-1.jpg',
+          'images/certificate-2.jpg',
+          'images/certificate-3.jpg'
         ]
       },
       roman: {
-        name: "Роман Теллиев",
-        position: "Преподаватель анатомии и физиологии",
-        photo: "images/Roman.JPG",
-        description: `Выпускник КГУФКСТ, профессиональный тренер с более чем 10-летним опытом. Ведёт курсы по анатомии и биомеханике для преподавателей йоги.`,
+        name: 'Роман Теллиев',
+        position: 'Преподаватель анатомии и физиологии',
+        photo: 'images/Roman.JPG',
+        description: `Выпускник КГУФКСТ, более 10 лет в фитнесе и преподавании.\n\nЭксперт в области анатомии и биомеханики. Помогает понять тело изнутри и применять знания в практике йоги.`,
         certificates: [
-          "images/certificates/roman_1.jpg",
-          "images/certificates/roman_2.jpg"
+          'images/roman_cert1.jpg',
+          'images/roman_cert2.jpg'
         ]
       }
     };
 
     const modal = document.getElementById('modal');
-    const modalCloseBtn = document.getElementById('modal-close');
     const modalTitle = modal.querySelector('.modal-title');
     const modalPosition = modal.querySelector('.modal-position');
     const modalPhoto = modal.querySelector('.modal-photo');
     const modalDescription = modal.querySelector('.modal-description');
     const certificatesContainer = modal.querySelector('.certificates');
+    const modalClose = document.getElementById('modalClose');
 
-    document.querySelectorAll('.teacher-card').forEach(card => {
-      card.addEventListener('click', () => {
+    // Обработчик для кнопок Подробнее
+    document.querySelectorAll('.btn-more').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = button.closest('.teacher-card');
         const key = card.getAttribute('data-teacher');
         const teacher = teachersData[key];
         if (!teacher) return;
@@ -467,17 +477,27 @@
         });
 
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // чтобы страница под модалкой не скроллилась
+        document.body.style.overflow = 'hidden';
       });
     });
 
-    modalCloseBtn.addEventListener('click', () => {
+    // Закрытие модального окна
+    modalClose.addEventListener('click', () => {
       modal.classList.remove('active');
       document.body.style.overflow = '';
     });
 
+    // Закрытие по клику вне модального окна
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Закрытие по Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
         modal.classList.remove('active');
         document.body.style.overflow = '';
       }
@@ -485,6 +505,7 @@
   </script>
 </body>
 </html>
+
 
 
 
