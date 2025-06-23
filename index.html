@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Школа Йоги — Курсы</title>
-  <!-- Шрифты и иконки -->
+  <!-- Подключаем шрифты -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -15,53 +15,55 @@
       color: #2a3548;
       line-height: 1.6;
     }
+
     header {
       background: #6da7d0;
       color: white;
-      padding: 30px 20px 60px;
-      text-align: center;
+      padding: 20px;
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
       position: relative;
-    }
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
+      justify-content: space-between;
     }
+
     .logo {
-      height: 60px;
       width: 60px;
-      border-radius: 50%;
-      object-fit: contain;
+      height: auto;
+      margin-right: 16px;
     }
-    .title-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+    .title-wrapper {
+      flex-grow: 1;
     }
-    .title-block h1 {
+
+    .title-wrapper h1 {
       font-family: 'Nunito', sans-serif;
       font-weight: 300;
       font-style: italic;
       margin: 0;
       font-size: 2.2rem;
       letter-spacing: 0.8px;
+      line-height: 1.1;
     }
-    .subtitle {
+
+    .title-wrapper .subtitle {
       font-family: 'Nunito', sans-serif;
       font-weight: 300;
       font-style: italic;
+      margin-top: 8px;
       font-size: 1.1rem;
       color: #dce6f4;
-      margin-top: 6px;
       letter-spacing: 0.4px;
     }
+
     .about-button {
-      position: absolute;
-      bottom: 15px;
-      right: 20px;
       padding: 10px 20px;
       background-color: #346ba1;
       color: white;
@@ -71,7 +73,9 @@
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s ease;
       text-decoration: none;
+      text-align: center;
     }
+
     .about-button:hover {
       background-color: #27527a;
       transform: scale(1.05);
@@ -85,6 +89,7 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
     }
+
     a.course-card {
       background: white;
       padding: 24px 20px;
@@ -95,11 +100,15 @@
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
+      cursor: pointer;
     }
+
     a.course-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 24px rgb(0 0 0 / 0.15);
     }
+
     .course-card img {
       width: 100%;
       height: 180px;
@@ -107,6 +116,7 @@
       border-radius: 12px;
       margin-bottom: 16px;
     }
+
     .course-card h2 {
       margin: 0 0 12px;
       font-size: 1.4rem;
@@ -114,7 +124,9 @@
       color: #1f4e79;
       text-align: center;
     }
+
     .course-card p {
+      flex-grow: 1;
       font-size: 1rem;
       color: #5a5a5a;
       margin: 0;
@@ -141,30 +153,34 @@
       color: #163a5c;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
       .logo {
-        height: 50px;
-        width: 50px;
+        margin: 0 0 10px 0;
       }
-      .title-block h1 {
-        font-size: 1.6rem;
-      }
-      .subtitle {
-        font-size: 0.95rem;
+
+      .about-button {
+        margin-top: 10px;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="header-content">
-      <img src="logo.png" alt="Логотип" class="logo" />
-      <div class="title-block">
+    <div class="header-inner">
+      <img src="images/logo.png" alt="Школа Йоги логотип" class="logo">
+      <div class="title-wrapper">
         <h1>Школа йоги онлайн</h1>
         <p class="subtitle">Учись. Преподавай. Расти.</p>
       </div>
+      <a href="about.html" class="about-button">О школе</a>
     </div>
-    <a href="about.html" class="about-button">О школе</a>
   </header>
 
   <main>
@@ -213,6 +229,7 @@
     &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены. <br>
     Контакты: WhatsApp: +66 (82) 901 7770
   </footer>
+
 </body>
 </html>
 
