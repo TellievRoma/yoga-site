@@ -81,7 +81,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       padding: 20px;
       text-align: center;
-      cursor: pointer; /* добавлено */
+      cursor: pointer;
       transition: transform 0.2s ease;
     }
     .teacher-card:hover {
@@ -261,16 +261,19 @@
     }
     .certificates {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      overflow-x: auto;
       gap: 12px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      scroll-snap-type: x mandatory;
     }
     .certificates img {
-      max-width: 140px;
+      max-height: 160px;
       border-radius: 8px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
       cursor: pointer;
       transition: transform 0.3s ease;
+      scroll-snap-align: center;
     }
     .certificates img:hover {
       transform: scale(1.05);
@@ -393,11 +396,13 @@
     <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button class="modal-close" id="modal-close" aria-label="Закрыть">&times;</button>
       <h2 class="modal-title" id="modal-title"></h2>
-      <div class="modal-position"></div>
-      <img class="modal-photo" alt="" />
+      <p class="modal-position"></p>
+      <img src="" alt="" class="modal-photo" />
       <p class="modal-description"></p>
-      <h3 class="certificates-title">Дипломы и сертификаты</h3>
-      <div class="certificates"></div>
+      <div>
+        <h3 class="certificates-title">Сертификаты</h3>
+        <div class="certificates"></div>
+      </div>
     </div>
   </div>
 
@@ -405,11 +410,9 @@
     const teachersData = {
       nadezhda: {
         name: "Надежда Теллиева",
-        position: "Основатель школы, преподаватель хатха йоги и аэройоги",
-        photo: "images/Nadezhda_large.JPG",
-        description: `Надежда — опытный преподаватель с более чем 10 годами практики.
-Специализируется на хатха йоге, аэройоге и женском здоровье.
-Основатель онлайн школы йоги.`,
+        position: "Основатель школы, преподаватель Хатха йоги и Аэройоги",
+        photo: "images/Nadezhda.JPG",
+        description: `Преподаёт более 10 лет. Специалист по женскому здоровью и автор курсов. Обладает глубокими знаниями и личным опытом в практике йоги.`,
         certificates: [
           "images/certificatesnadezhda_cert1.png",
           "images/certificatesnadezhda_cert2.png",
@@ -426,53 +429,54 @@
       roman: {
         name: "Роман Теллиев",
         position: "Преподаватель анатомии и физиологии",
-        photo: "images/Roman_large.JPG",
-        description: `Роман — специалист с большим опытом в фитнесе и преподавании анатомии.
-Выпускник КГУФКСТ.
-Преподает правильную технику и биомеханику.`,
+        photo: "images/Roman.JPG",
+        description: `Выпускник КГУФКСТ, профессиональный тренер с более чем 10-летним опытом. Ведёт курсы по анатомии и биомеханике для преподавателей йоги.`,
         certificates: [
-          "images/certificates/roman_cert1.jpg",
-          "images/certificates/roman_cert2.jpg"
+          "images/certificates/roman_1.jpg",
+          "images/certificates/roman_2.jpg"
         ]
       }
     };
 
     const modal = document.getElementById('modal');
-    const modalClose = document.getElementById('modal-close');
+    const modalCloseBtn = document.getElementById('modal-close');
     const modalTitle = modal.querySelector('.modal-title');
     const modalPosition = modal.querySelector('.modal-position');
     const modalPhoto = modal.querySelector('.modal-photo');
     const modalDescription = modal.querySelector('.modal-description');
-    const modalCertificates = modal.querySelector('.certificates');
+    const certificatesContainer = modal.querySelector('.certificates');
 
     document.querySelectorAll('.teacher-card').forEach(card => {
       card.addEventListener('click', () => {
-        const teacherKey = card.dataset.teacher;
-        const data = teachersData[teacherKey];
+        const key = card.getAttribute('data-teacher');
+        const teacher = teachersData[key];
+        if (!teacher) return;
 
-        if (!data) return;
+        modalTitle.textContent = teacher.name;
+        modalPosition.textContent = teacher.position;
+        modalPhoto.src = teacher.photo;
+        modalPhoto.alt = `Фото преподавателя ${teacher.name}`;
+        modalDescription.textContent = teacher.description;
 
-        modalTitle.textContent = data.name;
-        modalPosition.textContent = data.position;
-        modalPhoto.src = data.photo;
-        modalPhoto.alt = data.name;
-        modalDescription.textContent = data.description;
-
-        modalCertificates.innerHTML = data.certificates.map(src =>
-          `<img src="${src}" alt="Сертификат ${data.name}" />`
-        ).join('');
+        certificatesContainer.innerHTML = '';
+        teacher.certificates.forEach(src => {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = `Сертификат ${teacher.name}`;
+          certificatesContainer.appendChild(img);
+        });
 
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // чтобы страница под модалкой не скроллилась
       });
     });
 
-    modalClose.addEventListener('click', () => {
+    modalCloseBtn.addEventListener('click', () => {
       modal.classList.remove('active');
       document.body.style.overflow = '';
     });
 
-    modal.addEventListener('click', e => {
+    modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.classList.remove('active');
         document.body.style.overflow = '';
