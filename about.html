@@ -81,10 +81,9 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       padding: 20px;
       text-align: center;
-      cursor: pointer;
+      cursor: pointer; /* добавлено */
       transition: transform 0.2s ease;
     }
-
     .teacher-card:hover {
       transform: translateY(-5px);
     }
@@ -198,11 +197,9 @@
       z-index: 1000;
       padding: 20px;
     }
-
     .modal-overlay.active {
       display: flex;
     }
-
     .modal-content {
       background: white;
       border-radius: 12px;
@@ -215,7 +212,6 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.2);
       color: #2a3548;
     }
-
     .modal-close {
       position: absolute;
       top: 15px;
@@ -226,11 +222,9 @@
       transition: color 0.3s ease;
       user-select: none;
     }
-
     .modal-close:hover {
       color: #1f4e79;
     }
-
     .modal-title {
       font-weight: 700;
       font-size: 1.8rem;
@@ -238,7 +232,6 @@
       margin-bottom: 15px;
       text-align: center;
     }
-
     .modal-position {
       font-weight: 600;
       font-size: 1.1rem;
@@ -246,14 +239,12 @@
       margin-bottom: 20px;
       text-align: center;
     }
-
     .modal-description {
       font-size: 1rem;
       color: #444;
       margin-bottom: 25px;
       white-space: pre-line;
     }
-
     .modal-photo {
       width: 100%;
       max-height: 300px;
@@ -261,7 +252,6 @@
       border-radius: 12px;
       margin-bottom: 20px;
     }
-
     .certificates-title {
       font-weight: 700;
       font-size: 1.2rem;
@@ -269,38 +259,148 @@
       color: #1f4e79;
       text-align: center;
     }
-
     .certificates {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 12px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-      scroll-snap-type: x mandatory;
-      scroll-padding: 0 10px;
     }
-
     .certificates img {
-      flex: 0 0 auto;
       max-width: 140px;
-      height: auto;
       border-radius: 8px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
       cursor: pointer;
       transition: transform 0.3s ease;
-      scroll-snap-align: start;
     }
-
     .certificates img:hover {
       transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <!-- [ОСТАЛЬНОЙ КОД: header, main, секции, footer — без изменений] -->
-  <!-- [...ОСТАЛЬНОЙ КОД ОСТАЁТСЯ ТЕМ ЖЕ...] -->
-  
-  <!-- Скрипт внизу — без изменений -->
+  <header>
+    <h1>О Школе Йоги</h1>
+    <div class="social-icons">
+      <a href="https://t.me/School_yoga_online" target="_blank" title="Telegram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9.035 12.93l-.377 3.79c.54 0 .773-.234 1.057-.513l2.538-2.418 5.263 3.84c.964.528 1.652.25 1.894-.893l3.43-16.072c.312-1.449-.526-2.02-1.469-1.677L1.386 9.04c-1.413.545-1.39 1.328-.24 1.683l4.512 1.41L19.85 4.733c.63-.39 1.2-.174.73.217L9.035 12.93z" fill="white"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/66829017770" target="_blank" title="WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 3C9.383 3 4 8.383 4 15c0 2.65.93 5.086 2.477 7.036L5 28l6.188-1.458A11.905 11.905 0 0016 27c6.617 0 12-5.383 12-12S22.617 3 16 3zm0 21a9.01 9.01 0 01-4.61-1.26l-.33-.197-3.68.867.785-3.564-.22-.344A8.984 8.984 0 017 15c0-4.963 4.037-9 9-9s9 4.037 9 9-4.037 9-9 9zm5.02-6.315c-.274-.137-1.626-.8-1.879-.89-.252-.092-.436-.137-.62.137-.183.275-.71.89-.87 1.073-.16.183-.32.205-.595.068-.274-.137-1.157-.426-2.205-1.357-.816-.727-1.367-1.626-1.527-1.9-.16-.275-.017-.424.12-.561.123-.123.274-.32.411-.48.137-.16.183-.274.274-.457.092-.183.046-.343-.023-.48-.068-.137-.62-1.494-.85-2.05-.224-.537-.452-.464-.62-.472l-.527-.01c-.183 0-.48.068-.732.32-.252.252-.96.94-.96 2.29 0 1.35.984 2.653 1.12 2.837.137.183 1.935 2.957 4.694 4.145.656.282 1.168.45 1.565.575.657.209 1.254.18 1.727.109.527-.078 1.626-.663 1.857-1.303.229-.64.229-1.19.16-1.303-.068-.114-.252-.183-.527-.32z" fill="white"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>О нас</h2>
+      <p>
+        Школа Йоги Надежды Теллиевой — это онлайн-пространство для глубокого изучения йоги. Мы обучаем будущих преподавателей, создаём авторские курсы по Хатха йоге, Аэройоге, Анатомии, Пранаямам и Женскому здоровью.
+        Наши курсы соединяют древние знания с современным научным подходом, помогая каждому ученику раскрыться и обрести уверенность.
+      </p>
+    </section>
+
+    <section>
+      <h2>Преподаватели</h2>
+      <div class="teachers">
+        <div class="teacher-card" data-teacher="nadezhda">
+          <img src="images/Nadezhda.JPG" alt="Надежда Теллиева" />
+          <h3>Надежда Теллиева</h3>
+          <p>Основатель школы, преподаватель хатха йоги и аэройоги, специалист по женскому здоровью. Более 10 лет опыта.</p>
+        </div>
+        <div class="teacher-card" data-teacher="roman">
+          <img src="images/Roman.JPG" alt="Преподаватель анатомии" />
+          <h3>Роман Теллиев</h3>
+          <p>Преподаватель анатомии и физиологии. Выпускник КГУФКСТ. Более 10 лет опыта в фитнесе. Действующий тренер и преподаватель.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Отзывы учеников</h2>
+      <div class="reviews-carousel">
+
+        <div class="review-card">
+          <p>«Хочу поблагодарить Надю за то, что именно она стала проводником в мир йоги, если бы не она, я до сих пор бы думал, что йога далеко не в укреплении организма и взаимодействии с ЦНС и тела. Спасибо, теперь я хочу больше знать и лучше работать»</p>
+          <div class="review-profile">
+            <img src="images/Miwa.jpg" alt="micke_zalata">
+            <a href="https://www.instagram.com/micke_zalata" target="_blank">@micke_zalata</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Я хочу поблагодарить свою дорогую и замечательную @school_yoga_online за обучение на курсе ХАТХА ЙОГА. Мне нужен был человек, который научит, как понять эту информацию, как ей правильно пользоваться. Также хочу поблагодарить @roman_telliev за вводный курс АНАТОМИИ И БИОМЕХАНИКИ. Спасибо Вселенной за наше прекрасное знакомство и сотрудничество»</p>
+          <div class="review-profile">
+            <img src="images/ryz.jpg" alt="ryzhkovanataly" />
+            <a href="https://www.instagram.com/ryzhkovanataly/" target="_blank">@ryzhkovanataly</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Хочу оставить отзыв и поблагодарить Надю и Романа за столь интересный курс, я получило то, что хотела. Много знаний, много практики и много положительных эмоций»</p>
+          <div class="review-profile">
+            <img src="images/kseniya.jpg" alt="ksenia_yoga_practice">
+            <a href="https://www.instagram.com/ksenia_yoga_practice" target="_blank">ksenia_yoga_practice</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Хочу поблагодарить тебя за все знания, которые ты мне дала. Это такая мощная база, что сейчас даже я смотрю известных преподавателей, но понимаю что твоя подача была самой лучшей»</p>
+          <div class="review-profile">
+            <img src="images/hypno.jpg" alt="hypno__trip">
+            <a href="https://www.instagram.com/hypno__trip/" target="_blank">@hypno__trip</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Кто хочет познать йогу, я рекомендую школу Нади. Любовь с первого взгляда!»</p>
+          <div class="review-profile">
+            <img src="images/annapp.jpg" alt="anna_na.pp_" />
+            <a href="https://www.instagram.com/anna_na.pp_" target="_blank">@anna_na.pp_</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Я уже училась у Нади на курсах Хатха йоги и Пранаям. Теперь буду преподавать классы по Аэройоге. Очень рекомендую её»</p>
+          <div class="review-profile">
+            <img src="images/88yoga.jpg" alt="irysik013">
+            <a href="https://www.instagram.com/88.yoga.om/" target="_blank">@irysik013</a>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>«Надежда помогла полюбить гамаки с первого взгляда. Спасибо тебе за знания и огромный опыт»</p>
+          <div class="review-profile">
+            <img src="images/lara.jpg" alt="lara_fit_more">
+            <a href="https://www.instagram.com/lara_fit_more" target="_blank">@lara_fit_more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="index.html" class="back-button">Вернуться на главную страницу</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Школа Йоги Надежды Теллиевой. Все права защищены.
+  </footer>
+
+  <!-- Модальное окно -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Закрыть">&times;</button>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-position"></div>
+      <img class="modal-photo" alt="" />
+      <p class="modal-description"></p>
+      <h3 class="certificates-title">Дипломы и сертификаты</h3>
+      <div class="certificates"></div>
+    </div>
+  </div>
+
   <script>
     const teachersData = {
       nadezhda: {
@@ -381,10 +481,6 @@
   </script>
 </body>
 </html>
-
-
-
-  <!-- Мод
 
 
 
