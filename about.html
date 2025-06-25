@@ -81,7 +81,6 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       padding: 20px;
       text-align: center;
-      /* убрал cursor pointer, чтобы не путать */
       transition: transform 0.2s ease;
     }
     .teacher-card:hover {
@@ -203,7 +202,6 @@
       margin-top: 60px;
     }
 
-    /* Модальное окно */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -278,16 +276,20 @@
     }
     .certificates {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      overflow-x: auto;
       gap: 12px;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 10px;
+      scroll-padding: 10px;
     }
     .certificates img {
+      flex: 0 0 auto;
       max-width: 140px;
       border-radius: 8px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
       cursor: pointer;
       transition: transform 0.3s ease;
+      scroll-snap-align: start;
     }
     .certificates img:hover {
       transform: scale(1.05);
