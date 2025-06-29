@@ -291,8 +291,28 @@
       transition: transform 0.3s ease;
       scroll-snap-align: start;
     }
-    .certificates img:hover {
-      transform: scale(1.05);
+      .certificates img:hover {
+        transform: scale(1.05);
+
+        .reviews-carousel::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .reviews-carousel::-webkit-scrollbar-track {
+      background: #dce7f4; /* светлый фон трека */
+      border-radius: 6px;
+    }
+
+    .reviews-carousel::-webkit-scrollbar-thumb {
+      background: #1f4e79; /* основной синий */
+      border-radius: 6px;
+    }
+
+    .reviews-carousel::-webkit-scrollbar-thumb:hover {
+    background: #163a5c;
+    }
+
+
     }
   </style>
 </head>
