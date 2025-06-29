@@ -24,7 +24,7 @@
       position: relative;
     }
 
-     .social-icons {
+    .social-icons {
       position: absolute;
       top: 20px;
       right: 20px;
@@ -41,13 +41,6 @@
     .social-icons a:hover {
       transform: scale(1.2);
       color: #aad4ff;
-    }
-
-
-    .social-icons svg {
-      fill: white;
-      width: 100%;
-      height: 100%;
     }
 
     header h1 {
@@ -83,6 +76,7 @@
       text-align: center;
       transition: transform 0.2s ease;
     }
+
     .teacher-card:hover {
       transform: translateY(-5px);
     }
@@ -202,117 +196,28 @@
       margin-top: 60px;
     }
 
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      padding: 20px;
-    }
-    .modal-overlay.active {
-      display: flex;
-    }
-    .modal-content {
-      background: white;
-      border-radius: 12px;
-      max-width: 700px;
-      width: 100%;
-      max-height: 90vh;
-      overflow-y: auto;
-      padding: 30px;
-      position: relative;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-      color: #2a3548;
-    }
-    .modal-close {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 2rem;
-      color: #999;
-      cursor: pointer;
-      transition: color 0.3s ease;
-      user-select: none;
-    }
-    .modal-close:hover {
-      color: #1f4e79;
-    }
-    .modal-title {
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #1f4e79;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    .modal-position {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #444;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .modal-description {
-      font-size: 1rem;
-      color: #444;
-      margin-bottom: 25px;
-      white-space: pre-line;
-    }
-    .modal-photo {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-    .certificates-title {
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: #1f4e79;
-      text-align: center;
-    }
-    .certificates {
-      display: flex;
-      overflow-x: auto;
-      gap: 12px;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 10px;
-      scroll-padding: 10px;
-    }
-    .certificates img {
-      flex: 0 0 auto;
-      max-width: 140px;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      scroll-snap-align: start;
-    }
-      .certificates img:hover {
-        transform: scale(1.05);
-
-        .reviews-carousel::-webkit-scrollbar {
+    /* Стили для скроллбара отзывов */
+    .reviews-carousel::-webkit-scrollbar {
       height: 10px;
     }
 
     .reviews-carousel::-webkit-scrollbar-track {
-      background: #dce7f4; /* светлый фон трека */
+      background: #dce7f4;
       border-radius: 6px;
     }
 
     .reviews-carousel::-webkit-scrollbar-thumb {
-      background: #1f4e79; /* основной синий */
+      background: #1f4e79;
       border-radius: 6px;
     }
 
     .reviews-carousel::-webkit-scrollbar-thumb:hover {
-    background: #163a5c;
+      background: #163a5c;
     }
 
-
+    .reviews-carousel {
+      scrollbar-width: thin;
+      scrollbar-color: #1f4e79 #dce7f4;
     }
   </style>
 </head>
