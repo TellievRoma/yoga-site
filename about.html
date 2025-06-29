@@ -126,14 +126,18 @@ h2 {
   scroll-padding: 0 20px;
   padding: 10px 0;
   -webkit-overflow-scrolling: touch;
-
-  /* Скрываем стандартный горизонтальный скроллбар */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
 }
 
-.reviews-carousel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+/* Скрываем скроллбар на мобильных (до 767px) */
+@media (max-width: 767px) {
+  .reviews-carousel {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+
+  .reviews-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
 
 .review-card {
@@ -203,11 +207,6 @@ footer {
   color: #666;
   background-color: #eef4fb;
   margin-top: 60px;
-}
-
-/* Стили для скроллбара отзывов на десктопе - скрыты, чтобы не дублировался */
-.reviews-carousel::-webkit-scrollbar {
-  display: none;
 }
 
   </style>
